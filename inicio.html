@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLJURISTAS - Asesoría Insolvencia Económica Ley 1564</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #0a3d62; /* Azul oscuro corporativo */
+            --secondary-color: #0c6b9e; /* Azul medio */
+            --accent-color: #28a745; /* Verde para acciones */
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+            --white: #ffffff;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto; /* Centrado */
+            padding: 0 20px; /* Espacio lateral */
+        }
+
+        /* Header / Hero Section */
+        .hero {
+            background: linear-gradient(rgba(10, 61, 98, 0.85), rgba(10, 61, 98, 0.85)), url('https://via.placeholder.com/1500x500/cccccc/ffffff?text=Imagen+Profesional+Finanzas') no-repeat center center/cover; /* Reemplaza con una imagen real si tienes */
+            /* Si no quieres imagen de fondo, usa un degradado o color sólido: */
+            /* background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); */
+            /* background-color: var(--primary-color); */
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero .brand {
+             font-size: 1.3em;
+             font-weight: 600;
+             margin-top: 10px;
+             display: block;
+        }
+
+        /* Secciones */
+        section {
+            padding: 50px 0;
+            background-color: var(--white);
+            margin-bottom: 20px; /* Separación entre secciones */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        #cta-section { /* CTA principal más destacado */
+             background-color: var(--secondary-color);
+             color: var(--white);
+             text-align: center;
+        }
+        #cta-section h2{
+            color: var(--white);
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        /* Beneficios */
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Diseño en columnas responsivo */
+            gap: 25px; /* Espacio entre items */
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .benefits li {
+            display: flex;
+            align-items: flex-start; /* Alinear icono arriba */
+            font-size: 1.05em;
+        }
+        .benefits i {
+            color: var(--accent-color);
+            font-size: 1.5em;
+            margin-right: 15px;
+            margin-top: 5px; /* Ajuste vertical del icono */
+        }
+
+        /* Proceso */
+        .process ol {
+            list-style: none;
+            counter-reset: process-counter;
+            padding-left: 0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .process li {
+            counter-increment: process-counter;
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 50px; /* Espacio para el número */
+            font-size: 1.1em;
+        }
+        .process li::before {
+            content: counter(process-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 35px;
+            height: 35px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-family: var(--font-heading);
+        }
+
+        /* Botón CTA Principal */
+        .cta-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            font-family: var(--font-heading);
+            border-radius: 30px; /* Más redondeado */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .cta-button:hover {
+            background-color: #218838; /* Verde más oscuro */
+            transform: translateY(-2px); /* Efecto al pasar el mouse */
+        }
+
+        /* Formulario de Contacto */
+        #contacto {
+            background-color: var(--light-gray); /* Fondo ligeramente distinto */
+             box-shadow: none; /* Sin sombra para esta sección */
+             border-radius: 0;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Importante para que el padding no aumente el tamaño */
+            font-family: var(--font-body);
+            font-size: 1em;
+        }
+         .contact-form input[type="text"]:focus,
+         .contact-form input[type="email"]:focus,
+         .contact-form input[type="tel"]:focus,
+         .contact-form textarea:focus {
+              border-color: var(--secondary-color);
+              outline: none;
+              box-shadow: 0 0 5px rgba(12, 107, 158, 0.3);
+         }
+        .contact-form textarea {
+            height: 120px;
+            resize: vertical; /* Permitir redimensionar verticalmente */
+        }
+        .contact-form button[type="submit"] {
+            /* Reutilizamos el estilo del botón CTA pero quizás un poco más pequeño */
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%; /* Ocupar todo el ancho */
+        }
+        .contact-form button[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .contact-info p {
+             margin: 10px 0;
+             font-size: 1.1em;
+        }
+         .contact-info i {
+              margin-right: 8px;
+              color: var(--secondary-color);
+         }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--light-gray);
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 30px; /* Separación final */
+            font-size: 0.95em;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+         footer .footer-brand {
+              font-weight: bold;
+              font-family: var(--font-heading);
+              font-size: 1.1em;
+              color: var(--white);
+         }
+
+         /* Responsiveness (Ejemplo básico) */
+         @media (max-width: 768px) {
+             .hero h1 {
+                 font-size: 2.2em;
+             }
+             .hero p {
+                 font-size: 1em;
+             }
+             h2 {
+                 font-size: 1.8em;
+             }
+             .benefits ul {
+                grid-template-columns: 1fr; /* Una columna en móviles */
+             }
+         }
+
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Recupera tu Tranquilidad Financiera</h1>
+            <p>Te ayudamos a negociar tus deudas y reorganizar tus finanzas bajo la Ley de Insolvencia Económica de Persona Natural (Ley 1564 de 2012).</p>
+            <span class="brand">COLJURISTAS ABOGADOS ESPECIALIZADOS DE COLOMBIA</span>
+            </div>
+    </header>
+
+    <div class="main-content"> <section id="problema">
+            <div class="container">
+                <h2>¿Las Deudas Controlan Tu Vida?</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 30px auto;">Llamadas incesantes, preocupación constante, amenazas de embargo... Si esta es tu realidad, la Ley 1564 de 2012 es una <span class="highlight">herramienta legal diseñada para protegerte</span> y darte una segunda oportunidad financiera.</p>
+                </div>
+        </section>
+
+        <section id="solucion" class="benefits">
+             <div class="container">
+                <h2>Tu Solución: Asesoría Experta con COLJURISTAS</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">En <span class="highlight">COLJURISTAS</span>, te guiamos paso a paso para aprovechar los beneficios de la ley:</p>
+                <ul>
+                    <li><i class="fas fa-handshake"></i><span>Negociación unificada de deudas con TODOS tus acreedores.</span></li>
+                    <li><i class="fas fa-sack-dollar"></i><span>Acuerdos con cuotas realistas y ajustadas a tu capacidad de pago.</span></li>
+                    <li><i class="fas fa-shield-alt"></i><span>Suspensión inmediata de libranzas, embargos y procesos judiciales en tu contra.</span></li>
+                    <li><i class="fas fa-home"></i><span>Protección de tu patrimonio y bienes esenciales (vivienda, vehículo, etc.).</span></li>
+                    <li><i class="fas fa-chart-line"></i><span>Posibilidad de normalizar tu historial crediticio tras cumplir el acuerdo.</span></li>
+                    <li><i class="fas fa-smile-beam"></i><span>Recuperación de tu paz mental y control sobre tus finanzas.</span></li>
+                </ul>
+             </div>
+        </section>
+
+        <section id="proceso" class="process">
+             <div class="container">
+                <h2>Nuestro Proceso Simplificado</h2>
+                 <ol>
+                     <li><span class="highlight">Consulta Inicial Gratuita y Confidencial:</span> Analizamos tu situación sin costo y te explicamos cómo podemos ayudarte.</li>
+                     <li><span class="highlight">Análisis y Documentación:</span> Recopilamos la información necesaria sobre tus deudas, ingresos y patrimonio.</li>
+                     <li><span class="highlight">Diseño de Estrategia y Propuesta:</span> Creamos un plan de pago viable y preparamos la solicitud formal.</li>
+                     <li><span class="highlight">Trámite Legal y Negociación:</span> Te representamos ante notaría o centro de conciliación para negociar con tus acreedores.</li>
+                     <li><span class="highlight">Acompañamiento Continuo:</span> Te apoyamos durante todo el proceso y el cumplimiento del acuerdo.</li>
+                 </ol>
+            </div>
+        </section>
+
+        <section id="cta-section">
+            <div class="container">
+                <h2>¿Listo Para Empezar de Nuevo?</h2>
+                <p style="font-size: 1.1em; margin-bottom: 30px;">No dejes pasar más tiempo. Una consulta gratuita puede ser el inicio de tu recuperación financiera.</p>
+                <a href="#contacto" class="cta-button">Agenda Tu Consulta Gratuita Hoy</a>
+            </div>
+        </section>
+
+        <section id="contacto">
+             <div class="container">
+                <h2>Contáctanos Ahora</h2>
+                 <p style="text-align: center; max-width: 700px; margin: 0 auto 40px auto;">Completa el formulario o utiliza nuestros otros canales de comunicación. En <span class="highlight">COLJURISTAS</span> estamos listos para escucharte.</p>
+
+                 <div class="contact-form">
+                    <form action="https://formspree.io/f/xanepakp" method="POST">
+                        <label for="name">Nombre Completo:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Teléfono / Celular:</label>
+                        <input type="tel" id="phone" name="phone" required>
+
+                        <label for="message">Describe brevemente tu situación o consulta:</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <input type="hidden" name="_subject" value="Nuevo Contacto Landing Page Insolvencia - COLJURISTAS">
+
+                        <button type="submit" class="cta-button" style="width: 100%; font-size: 1.1em; padding: 15px 30px;">Enviar Consulta</button>
+                    </form>
+                 </div>
+
+                 <div class="contact-info">
+                     <p><i class="fas fa-phone-alt"></i> <strong>Teléfono:</strong> [Tu Número de Teléfono Principal]</p>
+                     <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> [Tu Número de WhatsApp si es diferente]</p>
+                     <p><i class="fas fa-envelope"></i> <strong>Email:</strong> juriscol79@yahoo.com.co</p>
+                     <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> [Tu Dirección Física si aplica]</p>
+                     <p><i class="fas fa-clock"></i> <strong>Horario:</strong> [Tus Horarios de Atención]</p>
+                 </div>
+            </div>
+        </section>
+
+    </div> <footer>
+        <div class="container">
+            <p class="footer-brand">COLJURISTAS ABOGADOS ESPECIALIZADOS DE COLOMBIA</p>
+            <p>Asesoría experta en Ley 1564 de 2012 - Insolvencia de Persona Natural No Comerciante.</p>
+            <p>&copy; <span id="currentYear"></span> Todos los derechos reservados.</p>
+            </div>
+    </footer>
+
+    <script>
+        // Script simple para actualizar el año en el footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Opcional: Suavizar scroll al hacer clic en enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
